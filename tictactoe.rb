@@ -187,8 +187,8 @@ end
 
 
 #run the game
-#Tictactoe.new.play
-Tictactoe.new.display_board(["F"," "," ","U"," ","C"," "," ","Y"])
+Tictactoe.new.play
+
 
 
 #Initially, I was using the @number_of_rounds for sorting out a bug that allowed
