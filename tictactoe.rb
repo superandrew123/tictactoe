@@ -22,12 +22,12 @@ class Tictactoe
 
 	def play
 
-		#Run round until @game_over is true is run.
+		#Run round until @game_over is true.
 		while @game_over == false
 			round(@moves, @mark)
-			#Check the winner method after each turn.
+			#Check the winner method after each round.
 			winner(@moves, @mark)
-			#Check if there are any unused spaces on the board and
+			#Check if there are any unused spaces on the board
 			#and return a draw if there are not.
 			open = @moves.count(" ")
 			if open == 0
@@ -160,7 +160,9 @@ class Tictactoe
 			play
 		#Quit
 		elsif answer == "N"
-			puts "Thank you for playing!"
+			puts "--------------------------"
+			puts "| Thank you for playing! |"
+			puts "--------------------------"
 		else
 			puts "Invalid response."
 			puts "Would you like to play again? (Y/N)"
