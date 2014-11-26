@@ -193,14 +193,6 @@ Tictactoe.new.play
 
 
 
-#Initially, I was using the @number_of_rounds for sorting out a bug that allowed
-#another turn after a victory condition was met. It was a shame to throw it away,
-#so it was added to the victory method.
-
-
-
-
-
 
 
 
