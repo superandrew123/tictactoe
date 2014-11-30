@@ -21,7 +21,6 @@ class Tictactoe
 	end
 
 	def play
-
 		#Run round until @game_over is true.
 		while @game_over == false
 			round(@moves, @mark)
@@ -33,7 +32,6 @@ class Tictactoe
 			if open == 0
 				display_board(@moves)
 				puts "The game is a draw!"
-				puts "Would you like to play again? (Y/N)"
 				play_again
 				@game_over = true
 			end
@@ -60,7 +58,6 @@ class Tictactoe
 		#matches one of the 9 valid options, the player value is stored in the
 		#board array. It sends a string to the error method if the value received
 		#is off the board or is already in use.
-
 		display_board(board)
 		puts "It's #{player}'s turn!"
 		puts "Which colume would you like to mark? (A, B, C)"
@@ -155,19 +152,23 @@ class Tictactoe
 	end
 
 	def play_again
+		puts "Would you like to play again? (Y/N)"
 		answer = gets.chomp.capitalize
 		#Start a new game
 		if answer == "Y"
 			puts ""
 			puts ""
 			puts ""
-			puts "---NEW GAME---"			
+			puts "---NEW GAME---"
+			#reset board, turn, and game_over condition and the number of rounds played.
+			initialize	
 			play
 		#Quit
 		elsif answer == "N"
 			puts "--------------------------"
 			puts "| Thank you for playing! |"
 			puts "--------------------------"
+			exit
 		else
 			puts "Invalid response."
 			puts "Would you like to play again? (Y/N)"
@@ -185,8 +186,6 @@ class Tictactoe
 		puts "#{@mark} has won the game in #{@number_of_rounds} turns!"
 		puts ""
 		puts ""
-		@game_over = true
-		puts "Would you like to play again? (Y/N)"
 		play_again
 	end		
 end
