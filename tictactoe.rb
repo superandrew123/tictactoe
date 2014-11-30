@@ -62,7 +62,7 @@ class Tictactoe
 		#is off the board or is already in use.
 
 		display_board(board)
-		puts "It's #{@mark}'s turn!"
+		puts "It's #{player}'s turn!"
 		puts "Which colume would you like to mark? (A, B, C)"
 		turn = gets.chomp.capitalize
 		puts "Which row would you like to mark? (1, 2, 3)"
