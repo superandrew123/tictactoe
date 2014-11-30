@@ -78,14 +78,19 @@ class Tictactoe
 				"B3" => 7,
 				"C3" => 8
 			}
+		#Check that the user input corisponds to a location on the board
 		if mark_board.has_key?(turn)
+			#Check that the square is not already taken				
 			if board[mark_board[turn]] == " "
-				board[mark_board[turn]] = player
-				@number_of_rounds += 1
+				#Marks the board		
+				board[mark_board[turn]] = player	
+				@number_of_rounds += 1				
 			else
+				#Error method if the selected board location is already taken
 				error("taken")
 			end
 		else
+			#Error method if the user input is not on the board
 			error("off")
 		end
 
