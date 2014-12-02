@@ -95,7 +95,7 @@ class Tictactoe
 
 
 	def turn_change
-		#Changes whose turn it is
+		#Changes whose turn it is 
 		if @mark == "X"
 			@mark = "O"
 		else
